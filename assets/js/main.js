@@ -2,11 +2,11 @@
 //Dato un array contenente una lista di cinque immagini, creare un carosello come nello screenshot allegato.
 
 const slides = [
-    './img/01.webp.jpg',
-    './img/02.webp.jpg',
-    './img/03.webp.jpg',
-    './img/04.webp.jpg',
-    './img/05.webp.jpg'
+    './assets/img/01.webp',
+    './assets/img/02.webp',
+    './assets/img/03.webp',
+    './assets/img/04.webp',
+    './assets/img/05.webp'
 ]
 
 console.log(slides);
@@ -37,7 +37,14 @@ for (let i = 0; i < slides.length; i++) {
 //utilizzo addEventListener e for per poter togliere e riassegnare la classe active
 const buttonUp = document.querySelector(".btn_up")
 
-//buttonUp.addEventListener("click", function(){})
+buttonUp.addEventListener("click", function(){
+
+    const currentImg = document.querySelector(".slides > img.active");
+    currentImg.classList.remove("active");
+
+
+
+})
 
 
 
