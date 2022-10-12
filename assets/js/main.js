@@ -30,24 +30,42 @@ const slidesEl = document.querySelector(".slide");
 for (let i = 0; i < slides.length; i++) {
     const slideImg = slides[i];
     const slideMarkup = `<img  class="${i === imgActive ? "active" : "" }"src="${slideImg}" alt="">`
-    slidesEl.innerHTML = slideMarkup;
+    slidesEl.insertAdjacentHTML("beforeend", slideMarkup)
 
-}
+}//MILESTONE 3
+//Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente.
+
 // attraverso i pulsanti devo scorrere le immagini
 //utilizzo addEventListener e for per poter togliere e riassegnare la classe active
 const buttonUp = document.querySelector(".btn_up")
 
 buttonUp.addEventListener("click", function(){
-
-    const currentImg = document.querySelector(".slides > img.active");
+    console.log("next");
+    const slides = document.querySelectorAll(".slide > img");
+    let currentImg = slides[imgActive];
+    console.log(currentImg);
     currentImg.classList.remove("active");
+    imgActive++;
 
-
-
+    //modificare la slide successiva
+    const nextSlide = slides[imgActive];
+    console.log(nextSlide);
+    nextSlide.classList.add('active');
 })
 
 
 
 
-//MILESTONE 3
-//Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente.
+
+// const bottonDown = document.querySelector(".btn_up")
+
+// bottonDown.addEventListener("click", function(){
+//     console.log("next");
+//     const slides = document.querySelectorAll(".slide > img");
+//     let currentImg = slides [imgActive];
+//     console.log(currentImg);
+//     currentImg.classList.remove("active");
+//     imgActive++
+    
+
+// })
