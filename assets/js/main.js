@@ -2,11 +2,11 @@
 //Dato un array contenente una lista di cinque immagini, creare un carosello come nello screenshot allegato.
 
 const slides = [
-    'img/01.webp',
-    'img/02.webp',
-    'img/03.webp',
-    'img/04.webp',
-    'img/05.webp',
+    './img/01.webp.jpg',
+    './img/02.webp.jpg',
+    './img/03.webp.jpg',
+    './img/04.webp.jpg',
+    './img/05.webp.jpg'
 ]
 
 console.log(slides);
@@ -20,25 +20,24 @@ console.log(slides);
 
 
 // seleziono l'immagine 
-imgActive = slides[0];
+let imgActive = 0;
 
 console.log(imgActive);
 //seleziono il tag della DOM in qui andanno le varie immagini
 const slidesEl = document.querySelector(".slide");
 
 //inserisco l'img selezionata dentro la DOM in modo dinamico 
+for (let i = 0; i < slides.length; i++) {
+    const slideImg = slides[i];
+    const slideMarkup = `<img  class="${i === imgActive ? "active" : "" }"src="${slideImg}" alt="">`
+    slidesEl.innerHTML = slideMarkup;
+
+}
 // attraverso i pulsanti devo scorrere le immagini
 //utilizzo addEventListener e for per poter togliere e riassegnare la classe active
 const buttonUp = document.querySelector(".btn_up")
 
-buttonUp.addEventListener("click", function(){
-    
-
-
-
-
-
-})
+//buttonUp.addEventListener("click", function(){})
 
 
 
