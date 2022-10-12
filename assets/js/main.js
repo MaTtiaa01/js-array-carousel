@@ -57,15 +57,18 @@ buttonUp.addEventListener("click", function(){
 
 
 
-// const bottonDown = document.querySelector(".btn_up")
+const bottonDown = document.querySelector(".btn_down")
 
-// bottonDown.addEventListener("click", function(){
-//     console.log("next");
-//     const slides = document.querySelectorAll(".slide > img");
-//     let currentImg = slides [imgActive];
-//     console.log(currentImg);
-//     currentImg.classList.remove("active");
-//     imgActive++
+bottonDown.addEventListener("click", function(){
+    console.log("next");
+    const slides = document.querySelectorAll(".slide > img");
+    let currentImg = slides [imgActive];
+    console.log(currentImg);
+    currentImg.classList.remove("active");
+    imgActive--
+
+    const preSlide = slides[imgActive];
+    preSlide.classList.add("active");
     
 
-// })
+})
