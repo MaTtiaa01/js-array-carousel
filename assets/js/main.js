@@ -37,9 +37,9 @@ for (let i = 0; i < slides.length; i++) {
 
 // attraverso i pulsanti devo scorrere le immagini
 //utilizzo addEventListener e for per poter togliere e riassegnare la classe active
-const buttonUp = document.querySelector(".btn_up")
+const buttonDown = document.querySelector(".btn_down")
 
-buttonUp.addEventListener("click", function(){
+buttonDown.addEventListener("click", function(){
     console.log("next");
     const slides = document.querySelectorAll(".slide > img");
     let currentImg = slides[imgActive];
@@ -57,9 +57,9 @@ buttonUp.addEventListener("click", function(){
 
 
 
-const bottonDown = document.querySelector(".btn_down")
+const  buttonUp = document.querySelector(".btn_up")
 
-bottonDown.addEventListener("click", function(){
+buttonUp.addEventListener("click", function(){
     console.log("next");
     const slides = document.querySelectorAll(".slide > img");
     let currentImg = slides [imgActive];

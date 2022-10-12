@@ -41,16 +41,23 @@ const buttonUp = document.querySelector(".btn_up")
 
 buttonUp.addEventListener("click", function(){
     console.log("next");
-    const slides = document.querySelectorAll(".slide > img");
-    let currentImg = slides[imgActive];
-    console.log(currentImg);
-    currentImg.classList.remove("active");
-    imgActive++;
 
-    //modificare la slide successiva
-    const nextSlide = slides[imgActive];
-    console.log(nextSlide);
-    nextSlide.classList.add('active');
+    
+        
+        
+        
+        const slides = document.querySelectorAll(".slide > img");
+        let currentImg = slides[imgActive];
+        console.log(currentImg);
+        currentImg.classList.remove("active");
+        imgActive++;
+        
+        //modificare la slide successiva
+        const nextSlide = slides[imgActive];
+        console.log(nextSlide);
+        nextSlide.classList.add('active');
+    
+    
 })
 
 
